@@ -16,10 +16,10 @@ const controller = {
 	})
 	},
 	search: (req, res) => {
-	let resultado = products.filter(producto => producto.name.toLowerCase().includes(req.query.keywords.toLowerCase().trim()))
+	let product = products.filter(producto => producto.name.toLowerCase().includes(req.query.keywords.toLowerCase().trim()))
     return  res.render('results',{
         products,
-        resultado,
+        product,
         busqueda: req.query.keywords
     })
 	},
